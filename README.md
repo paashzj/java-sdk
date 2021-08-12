@@ -5,7 +5,7 @@
 <dependency>
     <groupId>com.github.shoothzj</groupId>
     <artifactId>java-tool</artifactId>
-    <version>3.1.0</version>
+    <version>3.1.1</version>
 </dependency>
 ```
 ## sdk-spring-util
@@ -14,7 +14,7 @@
 <dependency>
     <groupId>com.github.shoothzj</groupId>
     <artifactId>sdk-spring-util</artifactId>
-    <version>3.1.0</version>
+    <version>3.1.1</version>
 </dependency>
 ```
 Scan the packages
