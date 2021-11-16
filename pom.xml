@@ -10,23 +10,29 @@
         <module>sdk-spring-util</module>
         <module>test-base</module>
         <module>sdk-net</module>
+        <module>sdk-mysql</module>
+        <module>sdk-kafka</module>
     </modules>
 
     <parent>
         <artifactId>java-dependency</artifactId>
         <groupId>com.github.shoothzj</groupId>
-        <version>3.1.5</version>
+        <version>3.1.9</version>
     </parent>
 
     <artifactId>java-sdk</artifactId>
-    <version>3.1.2</version>
-
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-    </properties>
+    <version>3.1.3</version>
 
     <dependencies>
+        <!-- log -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+        </dependency>
         <!-- lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
