@@ -10,6 +10,10 @@ import java.util.stream.Collectors;
 @Slf4j
 public class ShellUtil {
 
+    public static ShellResult executeScript(String script) {
+        return ShellUtil.executeCmd("bash -x " + script);
+    }
+
     public static ShellResult executeCmd(String[] cmd) {
         log.info("exec command array {}", String.join(";", cmd));
         String inputContent = "";
