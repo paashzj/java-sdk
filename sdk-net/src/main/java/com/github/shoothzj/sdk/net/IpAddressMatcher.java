@@ -1,4 +1,4 @@
-package com.github.shoothzj.javatool.util;
+package com.github.shoothzj.sdk.net;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -13,8 +13,8 @@ import java.util.Arrays;
  *
  * @author Luke Taylor
  * @since 3.0.2
- * 
- * slightly modified by omidzk to have zero dependency to any frameworks other than the JDK.  
+ *
+ * slightly modified by omidzk to have zero dependency to any frameworks other than the JDK.
  */
 public final class IpAddressMatcher {
     private final int nMaskBits;
@@ -28,13 +28,11 @@ public final class IpAddressMatcher {
      * come.
      */
     public IpAddressMatcher(String ipAddress) {
-
         if (ipAddress.indexOf('/') > 0) {
             String[] addressAndMask = ipAddress.split("/");
             ipAddress = addressAndMask[0];
             nMaskBits = Integer.parseInt(addressAndMask[1]);
-        }
-        else {
+        } else {
             nMaskBits = -1;
         }
         requiredAddress = parseAddress(ipAddress);
@@ -78,8 +76,7 @@ public final class IpAddressMatcher {
     private InetAddress parseAddress(String address) {
         try {
             return InetAddress.getByName(address);
-        }
-        catch (UnknownHostException e) {
+        } catch (UnknownHostException e) {
             throw new IllegalArgumentException("Failed to parse address" + address, e);
         }
     }

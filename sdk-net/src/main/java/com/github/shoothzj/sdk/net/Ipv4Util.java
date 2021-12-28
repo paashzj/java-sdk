@@ -1,7 +1,8 @@
-package com.github.shoothzj.javatool.util;
+package com.github.shoothzj.sdk.net;
 
 import com.github.shoothzj.javatool.module.network.IfCfg;
 import com.github.shoothzj.javatool.module.network.VirtualIfCfg;
+import com.github.shoothzj.javatool.util.RegexUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.net.util.SubnetUtils;
 
@@ -40,7 +41,8 @@ public class Ipv4Util {
         if (split.length == 1) {
             return ifCfg.getIp();
         }
-        return ifCfg.getVirtualIfCfgs().stream().filter(virtualIfCfg -> virtualIfCfg.getName().equals(split[1])).findAny().map(VirtualIfCfg::getIp).orElse(null);
+        return ifCfg.getVirtualIfCfgs().stream().filter(virtualIfCfg -> virtualIfCfg.getName().equals(split[1]))
+                .findAny().map(VirtualIfCfg::getIp).orElse(null);
     }
 
     public static List<IfCfg> getIfCfgs() {

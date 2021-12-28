@@ -16,7 +16,8 @@ public class EnhanceKafkaConsumer<K, V> {
 
     private volatile KafkaConsumer<K, V> consumer;
 
-    public EnhanceKafkaConsumer(Properties properties, Deserializer<K> keyDeserializer, Deserializer<V> valueDeserializer) {
+    public EnhanceKafkaConsumer(Properties properties, Deserializer<K> keyDeserializer,
+                                Deserializer<V> valueDeserializer) {
         this.consumer = new KafkaConsumer<K, V>(properties, keyDeserializer, valueDeserializer);
     }
 

@@ -1,4 +1,4 @@
-package com.github.shoothzj.javatool.util;
+package com.github.shoothzj.sdk.net;
 
 import com.google.common.net.InetAddresses;
 import org.slf4j.Logger;

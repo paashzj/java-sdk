@@ -12,6 +12,9 @@
         <module>sdk-net</module>
         <module>sdk-spring-util</module>
         <module>test-base</module>
+        <module>test-zookeeper</module>
+        <module>test-kafka</module>
+        <module>test-pulsar</module>
     </modules>
 
     <parent>
@@ -21,7 +24,7 @@
     </parent>
 
     <artifactId>java-sdk</artifactId>
-    <version>3.1.6</version>
+    <version>3.1.7</version>
 
     <dependencies>
         <!-- log -->
@@ -58,6 +61,8 @@
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>3.1.2</version>
                 <configuration>
+                    <configLocation>./ci/checkstyle/checkstyle.xml</configLocation>
+                    <suppressionsLocation>./ci/checkstyle/suppressions.xml</suppressionsLocation>
                     <includeTestSourceDirectory>true</includeTestSourceDirectory>
                     <encoding>UTF-8</encoding>
                     <excludes>**/proto/*</excludes>

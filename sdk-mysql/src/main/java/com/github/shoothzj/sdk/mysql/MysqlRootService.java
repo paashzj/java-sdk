@@ -13,7 +13,8 @@ import java.sql.PreparedStatement;
 @Slf4j
 public class MysqlRootService {
 
-    private static final String CREATE_DB_SQL = "CREATE DATABASE IF NOT EXISTS %s DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_bin";
+    private static final String CREATE_DB_SQL =
+            "CREATE DATABASE IF NOT EXISTS %s DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_bin";
 
     private static final String CREATE_USER = "CREATE USER IF NOT EXISTS ? identified by ?";
 

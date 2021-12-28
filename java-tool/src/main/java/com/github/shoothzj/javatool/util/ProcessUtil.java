@@ -25,11 +25,14 @@ public class ProcessUtil {
         if (listFiles == null) {
             return false;
         }
-        final List<File> procDir = Arrays.stream(listFiles).filter(f -> RegexUtil.NUMBER_PATTERN.matcher(f.getName()).matches()).collect(Collectors.toList());
+        final List<File> procDir = Arrays.stream(listFiles)
+                .filter(f -> RegexUtil.NUMBER_PATTERN.matcher(f.getName()).matches())
+                .collect(Collectors.toList());
         // find the proc cmdline
         for (File file : procDir) {
             try {
-                final byte[] byteArray = FileUtils.readFileToByteArray(new File(file.getCanonicalPath() + File.separator + "cmdline"));
+                final byte[] byteArray = FileUtils.readFileToByteArray(
+                        new File(file.getCanonicalPath() + File.separator + "cmdline"));
                 final byte[] bytes = new byte[byteArray.length];
                 for (int i = 0; i < byteArray.length; i++) {
                     if (byteArray[i] != 0x00) {

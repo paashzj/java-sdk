@@ -18,11 +18,13 @@ public class ShExecutorCreator {
 
     public static ExecutorService newSingleExecutor(String poolName) {
         return new ThreadPoolExecutor(1, 1, 10, TimeUnit.SECONDS,
-                new LinkedBlockingQueue<>(20), new DefaultThreadFactory(poolName), new SimpleLogRejectedExecutionHandler());
+                new LinkedBlockingQueue<>(20), new DefaultThreadFactory(poolName),
+                new SimpleLogRejectedExecutionHandler());
     }
 
     public static ScheduledExecutorService newScheduleExecutorService(int corePoolSize, String poolName) {
-        return new ScheduledThreadPoolExecutor(corePoolSize, new DefaultThreadFactory(poolName), new SimpleLogRejectedExecutionHandler());
+        return new ScheduledThreadPoolExecutor(corePoolSize, new DefaultThreadFactory(poolName),
+                new SimpleLogRejectedExecutionHandler());
     }
 
 }

@@ -3,8 +3,6 @@ package com.github.shoothzj.javatool.util;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
-import java.util.Arrays;
-import java.util.stream.Collectors;
 
 /**
  * @author akka
