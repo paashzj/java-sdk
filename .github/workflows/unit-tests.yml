@@ -19,3 +19,4 @@ jobs:
       - uses: codecov/codecov-action@v2
         with:
           files: ./java-tool/target/site/jacoco/jacoco.xml,./sdk-codec-bk/target/site/jacoco/jacoco.xml
+          flags: unittests
