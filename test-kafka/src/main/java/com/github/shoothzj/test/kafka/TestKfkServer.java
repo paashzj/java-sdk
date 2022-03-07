@@ -37,6 +37,8 @@ public class TestKfkServer {
         this.controllerPort = SocketUtil.getFreePort();
         properties.setProperty("node.id", "0");
         properties.setProperty("broker.id", "0");
+        properties.setProperty("auto.create.topics.enable", "true");
+        properties.setProperty("offsets.topic.replication.factor", "1");
         properties.setProperty("listeners",
                 String.format("PLAINTEXT://:%d,CONTROLLER://:%d", kafkaPort, controllerPort));
         properties.setProperty("controller.quorum.voters", String.format("0@localhost:%d", controllerPort));
