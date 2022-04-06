@@ -11,12 +11,6 @@ class RandomUtilTest {
     }
 
     @Test
-    public void textRandomInt() {
-        int nextInt = RandomUtil.nextInt();
-        Assertions.assertTrue(nextInt >= 0);
-    }
-
-    @Test
     public void textRandomIntWithBound() {
         int nextInt = RandomUtil.nextInt(5);
         Assertions.assertTrue(nextInt < 5);

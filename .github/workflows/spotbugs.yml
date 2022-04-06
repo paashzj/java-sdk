@@ -15,4 +15,4 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
       - name: spotbugs
-        run: mvn -B clean verify spotbugs:spotbugs
+        run: mvn -B -DskipTests clean verify spotbugs:spotbugs
