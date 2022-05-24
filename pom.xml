@@ -20,7 +20,7 @@
     <parent>
         <artifactId>java-dependency</artifactId>
         <groupId>com.github.shoothzj</groupId>
-        <version>3.1.26</version>
+        <version>3.1.29</version>
     </parent>
 
     <artifactId>java-sdk</artifactId>
