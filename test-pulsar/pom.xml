@@ -12,7 +12,7 @@
     <artifactId>test-pulsar</artifactId>
 
     <properties>
-        <simpleclient.version>0.5.0</simpleclient.version>
+        <simpleclient.version>0.16.0</simpleclient.version>
     </properties>
 
     <dependencies>
