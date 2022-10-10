@@ -13,9 +13,6 @@
         <module>sdk-spring-metrics</module>
         <module>sdk-spring-util</module>
         <module>test-base</module>
-        <module>test-zookeeper</module>
-        <module>test-kafka</module>
-        <module>test-pulsar</module>
     </modules>
 
     <parent>
